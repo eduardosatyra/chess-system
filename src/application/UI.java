@@ -113,6 +113,8 @@ public class UI {
 				.collect(Collectors.toList());
 		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK)
 				.collect(Collectors.toList());
+		boolean chessMatchKing = new ChessMatch().getMakeMoveCastlingKing();
+		boolean chessMatchQueen = new ChessMatch().getMakeMoveCastlingQueen();
 
 		System.out.println("Captured pieces:");
 		System.out.print("White: ");
